@@ -1,10 +1,10 @@
 var WebSocketServer = require("ws").Server;
 
 //creating a websocket server
-wss = new WebSocketServer({ port: 8800, host: "localhost" });
+wss = new WebSocketServer({ port: 8800 });
 
 //information
-console.log("[INFO]BROADCASTING SERVER IS RUNNING ON PORT 8080 IP 192.168.254.61");
+console.log("[INFO]BROADCASTING SERVER IS RUNNING");
 
 //connected clients list
 let clients = [];
@@ -33,7 +33,7 @@ wss.on("connection", function (ws, req) {
 
 //function to broadcast message to all connected clients
 function sendAll(message) {
-    
+
     //looping through clients from client list
     for (var i = 0; i < clients.length; i++) {
         if (sent_by == clients[i]) {
