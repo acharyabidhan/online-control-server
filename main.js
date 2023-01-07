@@ -1,7 +1,7 @@
 var WebSocketServer = require("ws").Server;
 
 //creating a websocket server
-wss = new WebSocketServer({ port: 8080, host: "192.168.254.61" });
+wss = new WebSocketServer({ port: 8800, host: "localhost" });
 
 //information
 console.log("[INFO]BROADCASTING SERVER IS RUNNING ON PORT 8080 IP 192.168.254.61");
